@@ -1,0 +1,17 @@
+BASE:
+ #log等级
+ log_level: "debug"
+ #扩展名
+ log_extension: ".log"
+ test:
+  url: "http://211.103.136.242:8064"
+  case_file: "testdatabase.xlsx"
+  case_sheet: "美多商城"
+
+
+
+email:
+ smtpserver: "smtp.163.com"
+ username: "18500096975@163.com"
+ password: "hyq123456"
+ receiver: "18500096975@163.com"

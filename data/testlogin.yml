@@ -1,0 +1,24 @@
+# 登录测试用例
+
+---
+# 测试用例名称
+"case_name": "登录用例成功"
+#url
+"url": "/authorizations/"
+#data数据
+"data":
+  "username": "python"
+  "password": "12345678"
+#期望结果
+  "expect": '"username": "python", "user_id": 1'
+
+---
+# 测试用例名称
+# 测试用例名称
+"case_name": "登录用例失败"
+"url": "/authorizations/"
+"data":
+  "username": "python"
+  "password": "111111"
+#期望结果
+  "expect": '"username": "python", "user_id": 1'

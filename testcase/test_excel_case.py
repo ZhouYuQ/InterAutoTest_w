@@ -15,7 +15,7 @@ from utils.RequestsUtil import Request
 
 # 1.初始化信息
 # 初始化测试用例文件
-case_file = os.path.join("../data",ConfigYaml().get_execl_file())
+case_file = os.path.join(Conf.get_data_path(),ConfigYaml().get_execl_file())
 # 测试用例sheet名称
 sheet_name = ConfigYaml().get_execl_sheet()
 # 获取运行测试用例列表
@@ -186,10 +186,10 @@ if __name__ == '__main__':
     report_path = Conf.get_report_path()+os.sep+"result"
     report_html_path = Conf.get_report_path()+os.sep+"html"
     # pytest.main(["test_excel_case.py", "--alluredir","./report/result"])
-    pytest.main(["test_excel_case.py", "--alluredir",report_path])
+    pytest.main(["-s", "--alluredir",report_path])
     # Base.allure_report("./report/result","./report/html")
-    Base.allure_report(report_path, report_html_path)
-    Base.send_mail(title="接口测试报告",content=report_html_path)
+    # Base.allure_report(report_path, report_html_path)
+    # Base.send_mail(title="接口测试报告",content=report_html_path)
 
 
 
